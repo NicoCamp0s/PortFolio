@@ -1,0 +1,75 @@
+/* works.module.css */
+
+.works {
+  padding: 50px;
+  background-color: rgb(38, 24, 59)
+}
+
+.projectList {
+  /* outline: solid 1px blue; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual ancho */
+  gap: 20px; /* Espacio entre los elementos */
+  margin: 0 auto;
+  max-width: 85%;
+}
+
+.project {
+  /* outline:  red solid 1px; */
+  font-family: "New Amsterdam", sans-serif;
+  color: white;
+  letter-spacing: 1.2px;
+  border-radius: 15px ;
+  background-color: #564a86a6;
+  border: 1px solid #1b1142;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.project.expanded {
+  transform: scale(1.05); /* Ampliar el proyecto cuando está seleccionado */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1; /* Asegura que esté por encima del resto */
+}
+
+.project h3 {
+  font-size: 1.5em;
+  /* outline: yellow solid 1px; */
+  max-width: 50%;
+  letter-spacing: 2px;
+}
+
+.project .details {
+  margin-top: 10px;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.project.expanded .details {
+  border-radius: 15px;
+  background-color: #5d5385a6;
+  opacity: 1;
+  visibility: visible;
+  max-height: 400px; /* Ajusta según sea necesario */
+}
+
+.project a {
+  color: #333;
+  /* outline: solid red 1px; */
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
