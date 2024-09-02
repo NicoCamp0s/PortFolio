@@ -1,0 +1,45 @@
+/* footer.module.css */
+.footer {
+  background-color: #272727;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.socials {
+  margin: 10px 0;
+}
+
+.socialLink {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1rem;
+}
+
+.socialLink:hover {
+  text-decoration: underline;
+}
+
+.contact {
+  margin: 10px 0;
+}
+
+.email {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+.email:hover {
+  text-decoration: underline;
+}

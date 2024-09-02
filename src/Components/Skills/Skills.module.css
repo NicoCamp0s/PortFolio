@@ -1,0 +1,70 @@
+/* Skills.module.css */
+.skillsContainer {
+  border: solid black 1px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* padding: 20px 10px 10px; */
+  width: 85%;
+  max-height: 100%;
+  position: relative; /* Permite posicionar elementos hijos con position: absolute */
+  background-color: rgb(38, 24, 59);
+}
+
+.title {
+  font-family: "New Amsterdam", sans-serif;
+  letter-spacing: 2px;
+  color: white;
+  font-size: 2em; 
+  position: absolute; 
+  top: 20px; 
+  left: 50%;
+  transform: translateX(-50%); 
+  z-index: 10; /* Asegura que el título esté por encima de otros elementos */
+}
+
+.frontContainer,
+.backContainer,
+.devOpsContainer {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+  margin-top: 80px; /* Añade margen superior para que no se sobreponga al título */
+}
+
+.subTitle {
+  color: white;
+  font-family: "New Amsterdam", sans-serif;
+  letter-spacing: 2px;
+}
+
+.skillContainer {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  background-color: #564a86a6;
+  border-radius: 8px;
+  border: 1px solid #1b1142;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.skillContainer:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.skillName {
+  font-size: 1em;
+  margin: 10px 0 5px;
+  color: white;
+}
+
+.skillIcon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 5px;
+}

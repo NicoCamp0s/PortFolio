@@ -1,12 +1,25 @@
 .home {
-  padding: 50px;
+  border: solid black 1px;
+  /* padding: 35px; */
+  background-color: rgb(38, 24, 59);
   text-align: center;
+  width: 85%;
 }
 
 .home h2 {
+  font-family: "New Amsterdam", sans-serif;
+  letter-spacing: 2px;
   font-size: 2em;
+  color: #ffffff;
+  margin-bottom: 20px;
 }
 
 .home p {
-  font-size: 1.2em;
+  font-family: "New Amsterdam", sans-serif;
+  letter-spacing: 1.5px;
+  font-size: 1em;
+  color: #ffffff;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
 }

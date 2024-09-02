@@ -52,7 +52,7 @@ const Works = () => {
 
   return (
     <section id="works" className={styles.works}>
-      <h2>Proyectos</h2>
+      <h2 className={styles.title}>Proyectos</h2>
       <div className={styles.projectList}>
         {projects.map((project, index) => (
           <div

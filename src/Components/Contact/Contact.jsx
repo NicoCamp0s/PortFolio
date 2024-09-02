@@ -20,7 +20,7 @@ const Contact = () => {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.5 }
     );
     if (node) {
       observer.observe(node);

@@ -5,17 +5,21 @@ import Home from "./Components/Home/Home"
 import Nav from "./Components/Nav/Nav"
 import Works from "./Components/Works/Works"
 import Skills from './Components/Skills/Skills';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
+    <>
+    <Nav />
     <div className="App">
-      <Nav />
       <Banner />
       <Home />
       <Skills />
       <Works />
       <Contact />
     </div>
+    <Footer />
+    </>
   );
 }
 
