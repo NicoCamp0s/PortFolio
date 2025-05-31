@@ -1,36 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import styles from './contact.module.css';
 import emailjs from 'emailjs-com';
 
 const Contact = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef(null);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState('');
-
-  useEffect(() => {
-    const node = sectionRef.current;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-    if (node) {
-      observer.observe(node);
-    }
-    return () => {
-      if (node) {
-        observer.unobserve(node);
-      }
-    };
-  }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -53,7 +29,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" ref={sectionRef} className={`${styles.contact} ${isVisible ? styles.show : ''}`}>
+    <section id="contact" className={`${styles.contact}`}>
       <h2>Contactame</h2>
       <div className={styles.formContainer}>
         <form onSubmit={handleSubmit}>

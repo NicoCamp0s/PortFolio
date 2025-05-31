@@ -8,7 +8,8 @@ export const FrontSkills = [
   { name: "Redux", link: "https://redux.js.org/", img: "https://profilinator.rishav.dev/skills-assets/redux-original.svg" },
   { name: "NextJS", link: "https://nextjs.org/", img: "https://profilinator.rishav.dev/skills-assets/nextjs.png" },
   { name: "Tailwind CSS", link: "https://www.tailwindcss.com/", img: "https://profilinator.rishav.dev/skills-assets/tailwindcss.svg" },
-  { name: "TypeScript", link: "https://www.typescriptlang.org/",img: "https://profilinator.rishav.dev/skills-assets/typescript-original.svg" }
+  { name: "TypeScript", link: "https://www.typescriptlang.org/",img: "https://profilinator.rishav.dev/skills-assets/typescript-original.svg" },
+  { name: "Styled Component", link: "https://styled-components.com/",img: "https://profilinator.rishav.dev/skills-assets/styled-components.png" }
 ];
 
 export const BackSkills = [
@@ -21,6 +22,8 @@ export const BackSkills = [
 
 export const DevOpsSkills = [
   { name: "Git", img: "https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg", link: "https://github.com/" },
-  { name: "Bash", img: "https://profilinator.rishav.dev/skills-assets/gnu_bash-icon.svg", link: "https://www.gnu.org/software/bash/" },
+  // { name: "Bash", img: "https://profilinator.rishav.dev/skills-assets/gnu_bash-icon.svg", link: "https://www.gnu.org/software/bash/" },
+  { name: "Docker", img: "https://profilinator.rishav.dev/skills-assets/docker-original-wordmark.svg", link: "https://www.docker.com/" },
+  { name: "Nginx", img: "https://profilinator.rishav.dev/skills-assets/nginx-original.svg", link: "https://www.nginx.com/" },
   { name: "Firebase", img: "https://profilinator.rishav.dev/skills-assets/firebase.png", link: "https://firebase.google.com/" },
 ];

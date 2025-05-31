@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
 import styles from './works.module.css';
 
 const Works = () => {
-  const [hoveredProject, setHoveredProject] = useState(null);
-
   const projects = [
     {
       title: "Medconnect",
@@ -42,39 +39,26 @@ const Works = () => {
     }
   ];
 
-  const handleMouseEnter = (index) => {
-    setHoveredProject(index);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredProject(null);
-  };
-
   return (
-    <section id="works" className={styles.works}>
-      <h2 className={styles.title}>Proyectos</h2>
-      <div className={styles.projectList}>
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className={`${styles.project} ${hoveredProject === index ? styles.expanded : ''}`}
-            onMouseEnter={() => handleMouseEnter(index)}
-            onMouseLeave={handleMouseLeave}
-          >
+
+  <section id="works" className={styles.works}>
+    <h2 className={styles.title}>Proyectos</h2>
+    <div className={styles.projectList}>
+      {projects.map((project, i) => (
+        <div key={i} className={styles.project}>
+          <div className={styles.projectContainer}>
             <h3>{project.title}</h3>
             <img src={project.image} alt={project.title} />
-            {hoveredProject === index && (
               <div className={styles.details}>
                 <p>{project.description}</p>
                 <p><strong>Tecnologías:</strong> {project.technologies}</p>
-                
                 <a href={project.link} target="_blank" rel="noopener noreferrer">Ver Proyecto</a>
               </div>
-            )}
           </div>
-        ))}
-      </div>
-    </section>
+        </div>
+      ))}
+    </div>
+  </section>
   );
 };
 

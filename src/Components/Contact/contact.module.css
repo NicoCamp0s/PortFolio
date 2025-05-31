@@ -1,19 +1,13 @@
 .contact {
     border: solid black 1px;
-    width: 85%;
-    /* padding: 50px; */
+    width: 90%;
+    margin: 10px; 
     text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-    background-color: rgb(38, 24, 59);
+    background-color: rgb(9, 0, 17);
     color: white;
 }
 
-.show {
-    opacity: 1;
-    transform: translateY(0);
-}
+
 
 .contact h2 {
     font-family: "New Amsterdam", sans-serif;
@@ -25,10 +19,10 @@
 .formContainer {
     font-family: "New Amsterdam", sans-serif;
     letter-spacing: 2px;
-    max-width: 75%; /* Ajusta el ancho máximo según lo necesites */
-    margin: 0 auto; /* Centra el formulario horizontalmente */
+    max-width: 75%;
+    margin: 0 auto;
     padding: 20px;
-    background-color: #564a86a6;
+    background-color: #2C1B47;
     border: 1px solid #1b1142;
     border-radius: 10px;
 }
