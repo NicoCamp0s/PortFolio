@@ -1,78 +1,107 @@
 .contact {
-    border: solid black 1px;
-    width: 90%;
-    margin: 10px; 
-    text-align: center;
-    background-color: rgb(9, 0, 17);
-    color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  color: #ccc;
 }
 
-
-
 .contact h2 {
-    font-family: "New Amsterdam", sans-serif;
-    letter-spacing: 2px;
-    font-size: 2em;
-    margin-bottom: 20px;
+  font-family: "New Amsterdam", sans-serif;
+  letter-spacing: 2px;
+  font-size: 2em;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .formContainer {
-    font-family: "New Amsterdam", sans-serif;
-    letter-spacing: 2px;
-    max-width: 75%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #2C1B47;
-    border: 1px solid #1b1142;
-    border-radius: 10px;
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 15px;
+  background-color: rgba(18, 18, 18, 0.85);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
 }
 
 .formGroup {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .formGroup label {
-    display: block;
-    margin-bottom: 5px;
+  font-weight: 500;
+  color: #eee;
 }
 
 .formGroup input,
 .formGroup textarea {
-    padding: 10px;
-    width: 90%;
-    background-color: #5d5385a6;
-    border: 1px solid #000000;
-    border-radius: 5px;
+  padding: 0.75rem;
+  width: 90%;
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  color: #f0f0f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.formGroup textarea {
-    resize: vertical;
+.formGroup input:focus,
+.formGroup textarea:focus {
+  border-color: #00ffff;
+  outline: none;
+  box-shadow: 0 0 5px #00ffff80;
 }
 
-button {
-    font-family: "New Amsterdam", sans-serif;
-    letter-spacing: 2px;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.button {
+  padding: 0.75rem 1.5rem;
+  background-color: #00ffff;
+  color: #121212;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 0 8px #00ffff80;
 }
 
-button:hover {
-    background-color: #555;
+.button:hover {
+  background-color: #00cccc;
+  transform: scale(1.05);
 }
 
 .statusMessage {
-    color: red;
-    margin-top: 10px;
+  color: red;
+  margin-top: 10px;
 }
 
 .successMessage {
-    color: green;
-    font-size: 1.2em;
-    text-align: center;
-    margin-top: 20px;
+  color: green;
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contact {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact {
+  animation: fadeIn 1s ease-in-out both;
 }

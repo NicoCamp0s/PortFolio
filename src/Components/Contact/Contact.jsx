@@ -29,7 +29,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className={`${styles.contact}`}>
+    <section id="Contact" className={`${styles.contact}`}>
       <h2>Contactame</h2>
       <div className={styles.formContainer}>
         <form onSubmit={handleSubmit}>
@@ -66,7 +66,7 @@ const Contact = () => {
               required
             ></textarea>
           </div>
-          <button type="submit">Enviar</button>
+          <button type="submit" className={styles.button}>Enviar</button>
         </form>
         {status && <p className={styles.statusMessage}>{status}</p>}
       </div>

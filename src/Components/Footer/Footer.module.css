@@ -13,7 +13,7 @@
 }
 
 .text {
-  color: white;
+  color: #ccc;
   margin: 0;
   font-size: 0.9rem;
 }
@@ -23,7 +23,7 @@
 }
 
 .socialLink {
-  color: white;
+  color: #ccc;
   text-decoration: none;
   margin: 0 10px;
   font-size: 16px;
@@ -33,7 +33,7 @@
 .socialLink:hover {
   color: #00ffff;
   transform: scale(1.1);
-  text-shadow: 0 0 5px #00ffff;
+  text-shadow: 0 0 5px #2563EB;
 }
 
 

@@ -1,44 +1,171 @@
+/* ----------------------- */
+/* NAVIGATION BASE STYLES */
+/* ----------------------- */
+
 .nav {
-  background-color: #1e1e1e;
-  padding: 10px;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
   text-align: center;
 }
 
-.navList {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
+/* Botón hamburguesa (solo móvil) */
+.menuButton {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1001;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #00ffff;
+  cursor: pointer;
+  padding: 10px;
 }
 
+/* Lista común (usada en móvil y desktop) */
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  background-color: #121212;
+  padding: 20px;
+  border-radius: 99px;
+  box-shadow: 0 0 20px #00000060;
+  width: fit-content;
+}
+
+/* Enlaces de navegación */
 .navLink {
-  color: white;
+  color: #ccc;
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
-  position: relative;
   transition: all 0.3s ease;
 }
 
 .navLink:hover {
   color: #00ffff;
   transform: scale(1.1);
-  text-shadow: 0 0 5px #00ffff;
+  text-shadow: 0 0 5px #2563EB;
 }
 
-@media (max-width: 600px) {
+/* Botón (ej: Modo Oscuro/Claro) */
+.button {
+  background-color: #1e1e1e;
+  color: #ccc;
+  border: 1px solid #333;
+  border-radius: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.1);
+}
+
+.button:hover {
+  background-color: #00ffff;
+  color: #121212;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #00ffff80;
+}
+
+/* ------------------ */
+/* MENU LATERAL (MÓVIL) */
+/* ------------------ */
+
+.sideMenu {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 25%;
+  height: 100vh;
+  background-color: #121212;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.6);
+  padding: 60px 20px;
+  z-index: 1002;
+  transition: left 0.3s ease;
+}
+
+.sideMenu.open {
+  left: 0;
+}
+
+/* Fondo oscuro detrás del menú */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+/* --------------------- */
+/* RESPONSIVE STYLES */
+/* --------------------- */
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navListDesktop {
+    display: none;
+  }
+
+  .menuButton {
+    display: block;
+  }
+
   .navList {
     flex-direction: column;
-    align-items: center;
     gap: 20px;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+  .menuButton,
+  .sideMenu,
+  .overlay {
+    display: none;
   }
 
-  .navLink {
-    font-size: 18px;
+  .navListDesktop {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 20px;
+    gap: 30px;
+    background-color: #121212;
+    border-radius: 99px;
+    box-shadow: 0 0 20px #00000060;
+    transition: opacity 0.6s ease, transform 0.6s ease;
   }
 
-  .nav {
-    padding: 15px;
+  .navListDesktop.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+  }
+
+  .navListDesktop.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .active {
+    color: #00ffff;
+    text-shadow: 0 0 8px #2563EB;
+    font-weight: bold;
   }
 }

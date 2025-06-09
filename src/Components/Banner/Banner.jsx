@@ -2,11 +2,11 @@ import styles from './banner.module.css';
 
 const Banner = () => {
   return (
-    <section className={styles.banner}>
-      <h2>Nicolás Campos</h2>
+    <section id='Inicio' className={styles.banner}>
       <h2>FullStack Developer</h2>
+      <h2>Nicolás Campos</h2>
       <img src="/image/icono.svg" alt="Avatar de Nicolás" />
-      <p>Soy un desarrollador web apasionado por crear soluciones innovadoras y escalables.</p>
+      <p>Hola, soy Nico. Soy un desarrollador web fullstack comprometido con crear productos funcionales, escalables y pensados para el usuario.</p>
     </section>
   );
 };
