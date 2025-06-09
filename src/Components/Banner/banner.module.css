@@ -1,7 +1,7 @@
 .banner {
   letter-spacing: 3px;
   text-align: center;
-  color: #ccc;
+  color: var(--banner-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,7 +12,7 @@
   width: 500px;
   height: auto;
   border-radius: 20px;
-  box-shadow: 0 0 10px #00ffff50;
+  box-shadow: 0 0 10px var(--banner-shadow);
   transition: transform 0.3s ease;
 }
 
@@ -28,7 +28,7 @@
 .banner h2:last-of-type {
   font-family: "New Amsterdam", sans-serif;
   font-size: 70px;
-  color: #00ffff;
+  color: var(--banner-h2-color);
 }
 
 .banner p {
@@ -36,7 +36,7 @@
   max-width: 800px;
   line-height: 1.6;
   /* margin-top: 30px; */
-  color: #ccc;
+  color: var(--banner-color);
 }
 
 /* animacion */
@@ -58,14 +58,12 @@
   .banner h2:last-of-type {
     font-family: "New Amsterdam", sans-serif;
     font-size: 40px;
-    color: #00ffff;
   }
 
   .banner img {
     width: 60%;
     height: auto;
     border-radius: 20px;
-    box-shadow: 0 0 10px #00ffff50;
     transition: transform 0.3s ease;
   }
 }

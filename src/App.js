@@ -27,8 +27,6 @@ function App() {
 
   return (
     <div className={`AppCont ${darkMode ? "dark-mode" : "light-mode"}`}>
-      <div className="background-layer light" />
-      <div className="background-layer dark" />
       <div id="Inicio" className="AppCont">
         <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <div className="App">
